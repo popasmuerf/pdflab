@@ -29,4 +29,6 @@ export class FoobarComponent implements OnInit {
       pdf.save('MYPdf.pdf'); // Generated PDF   
     }); 
 
+  }
+
 }
