@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as jspdf from 'jspdf';  
 import html2canvas from 'html2canvas';  
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-foobar',
+  templateUrl: './foobar.component.html',
+  styleUrls: ['./foobar.component.css']
 })
-export class AppComponent {
-  title = 'pdflab';
+export class FoobarComponent implements OnInit {
 
+  constructor() { }
 
+  ngOnInit() {
+  }
 
   public captureScreen(){
     var data = document.getElementById('contentToConvert');  
@@ -25,10 +27,6 @@ export class AppComponent {
       var position = 0;  
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
       pdf.save('MYPdf.pdf'); // Generated PDF   
-    });  
-  }
-
-
-
+    }); 
 
 }
